@@ -64,6 +64,10 @@ class Pushwoosh(object):
             if 'conditions' in item:
                 push['conditions'] = [item['conditions']]
 
+            # If data set, add that to the push data
+            if 'data' in item:
+                push['data'] = item['data']
+
             # Append to the list
             push_list.append(push)
 
